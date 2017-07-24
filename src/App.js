@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Highlights from './components/highlights-component/highlights.component'
+import Highlights from './components/highlights-component/highlights.component';
+import Carousel from './containers/Carousel/Carousel';
 import './App.css';
 
-import Dummy from './containers/dummy';
+
 
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Highlights></Highlights>
-        <Dummy />
+        {/* <Carousel /> */}
       </div>
     );
   }

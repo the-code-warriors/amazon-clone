@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 
+import './carousel.css';
 
 
 
+export default class Carousel extends Component{
 
-export default class Dummy extends Component{
-  constructor(props){
-    super(props);
-  }
 
   render(){
     return (
       <div>
-        i am dummy
+        <h1>Carousel</h1>
       </div>
     )
   }
