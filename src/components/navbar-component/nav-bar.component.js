@@ -71,6 +71,13 @@ class Navbar extends Component {
                     </div> {/*<!-- end of nav-top -->*/}
                     
                     <div className="nav-bottom">
+                        <div className="dp-container">
+                            Departments &nbsp;<span><i className="fa fa-caret-down"></i></span>
+                        </div>
+                        <div className="bottom-nav-link">
+                            <a href="#" className="link-1">Your Amazon.com</a>&nbsp;
+                            <a href="#" className="link-2">Today's Deal</a>
+                        </div>
                         
                     </div>
                 </nav>

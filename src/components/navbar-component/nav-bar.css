@@ -2,7 +2,6 @@
     width: 100vw;
 }
 .nav-bar {
-    background-color: #232f3e;
     display: flex;
     flex-direction: column;
 }
@@ -11,6 +10,7 @@
     justify-content: space-around;
     align-items: center;
     height: 50px;
+    background-color: #232f3e;
 }
 .nav-logo-container {
     width: 100px;
@@ -20,18 +20,19 @@
 .nav-logo {
     background-image: url(./../../assets/amz-nav-logo.png);
     background-size: contain; 
-    width: 100%;
-    height: 100%;
+    width: 112%;
+    height: 140%;
     background-repeat: no-repeat;
     z-index: 1;
     position: relative;
 }
 .logo-link-span {
+    white-space: nowrap;
     color: white;
     position: absolute;
     font-size: .7em;
-    top: 9px;
-    left: 46px;
+    top: 14px;
+    left: 66px;
 }
 .logo-link{
     color: #48a3c6;
@@ -40,19 +41,23 @@
 }
 
 .search-bar-container {
-    width: 50%;
+    width: 45%;
     margin: 4px;
     border-radius: 6px;
     border: 1px solid transparent;
+    padding-top: 11px;
+    position: relative;
 }
 
 .nav-search-dropdown {
-    width: 35px;
+    width: 40px;
     height: 35px;
     border-radius: 6px 0px 0px 6px; 
     border: none;
     background-color: #dadada;
     font-size: 15px;
+    padding: 6px;
+
 }
 #search-bar{
     height: 33px;
@@ -60,6 +65,7 @@
     border: none;
     outline: 0;
     font-size: 15px;
+ 
 }
 #search-btn {
     height: 35px;
@@ -79,5 +85,51 @@
     font-family: arial, sans-serif;
     color: white;
     font-size: 28px;
+    padding-top: 11px;
     padding-right: 20px;
+    margin: 12px;
+    white-space: nowrap;
+}
+
+.nav-bottom{
+    display: flex;
+    align-items: flex-end;
+    height: 50px; 
+    background-color: #232f3e;
+
+}
+.dp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.bottom-nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    padding: 10px;
+    font-family: arial, sans-serif;
+
+}
+.link-1{
+    color: #ccc;
+    font-size: 12px;
+    text-decoration:none;
+}
+.link-1:hover{
+    text-decoration: underline;
+}
+.link-2 {
+    padding-left: 12px;
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: none;
+}
+.link-2:hover {
+    text-decoration: underline;
 }
