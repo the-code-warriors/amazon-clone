@@ -12,12 +12,16 @@ class App extends Component {
     return (
       <div className="App">
         <Highlights></Highlights>
+<<<<<<< HEAD
+        <Carousel />
+=======
 
         <Navbar/>
         <Dummy />
 
         {/* <Carousel /> */}
 
+>>>>>>> master
       </div>
     );
   }
