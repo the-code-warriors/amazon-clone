@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Highlights></Highlights>
-        {/* <Carousel /> */}
+        <Carousel />
       </div>
     );
   }
