@@ -1,0 +1,135 @@
+.nav-bar-container {
+    width: 100vw;
+}
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+}
+.nav-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: #232f3e;
+}
+.nav-logo-container {
+    width: 100px;
+    height: 20px; 
+    padding: 10px 20px;
+}
+.nav-logo {
+    background-image: url(./../../assets/amz-nav-logo.png);
+    background-size: contain; 
+    width: 112%;
+    height: 140%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+}
+.logo-link-span {
+    white-space: nowrap;
+    color: white;
+    position: absolute;
+    font-size: .7em;
+    top: 14px;
+    left: 66px;
+}
+.logo-link{
+    color: #48a3c6;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.search-bar-container {
+    width: 45%;
+    margin: 4px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    padding-top: 11px;
+    position: relative;
+}
+
+.nav-search-dropdown {
+    width: 40px;
+    height: 35px;
+    border-radius: 6px 0px 0px 6px; 
+    border: none;
+    background-color: #dadada;
+    font-size: 15px;
+    padding: 6px;
+
+}
+#search-bar{
+    height: 33px;
+    width: 70%;
+    border: none;
+    outline: 0;
+    font-size: 15px;
+ 
+}
+#search-btn {
+    height: 35px;
+    background-color: #febd69;
+    border: none; 
+    border-radius: 0px 6px 6px 0px; 
+}
+#search-btn:hover{
+    background-color: #f3a847;
+}
+.search-icon {
+    font-size: 18px;
+    padding: 6px;
+    color: rgba(0,0,0,.7);
+}
+.top-nav-promo {
+    font-family: arial, sans-serif;
+    color: white;
+    font-size: 28px;
+    padding-top: 11px;
+    padding-right: 20px;
+    margin: 12px;
+    white-space: nowrap;
+}
+
+.nav-bottom{
+    display: flex;
+    align-items: flex-end;
+    height: 50px; 
+    background-color: #232f3e;
+
+}
+.dp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.bottom-nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    padding: 10px;
+    font-family: arial, sans-serif;
+
+}
+.link-1{
+    color: #ccc;
+    font-size: 12px;
+    text-decoration:none;
+}
+.link-1:hover{
+    text-decoration: underline;
+}
+.link-2 {
+    padding-left: 12px;
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: none;
+}
+.link-2:hover {
+    text-decoration: underline;
+}
