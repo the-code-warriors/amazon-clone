@@ -8,7 +8,7 @@ class Navbar extends Component {
                 <nav className="nav-bar">
                     <div className="nav-top">
                         <div className="nav-logo-container">
-                            <div className="nav-logo"><span className="logo-link-span"><a href="#" className="logo-link">Try Prime</a></span></div>
+                            <div className="nav-logo"><span className="logo-link-span"><a href="" className="logo-link">Try Prime</a></span></div>
                         </div>
                         <div className="search-bar-container">
                                 <select className="nav-search-dropdown searchSelect"  data-nav-selected="0" id="searchDropdownBox" name="url" tabIndex="18" title="Search in">
@@ -75,8 +75,18 @@ class Navbar extends Component {
                             Departments &nbsp;<span><i className="fa fa-caret-down"></i></span>
                         </div>
                         <div className="bottom-nav-link">
-                            <a href="#" className="link-1">Your Amazon.com</a>&nbsp;
-                            <a href="#" className="link-2">Today's Deal</a>
+                            <a href="" className="link-1">Your Amazon.com</a>&nbsp;
+                            <a href="" className="link-2">Today's Deal</a>
+                            <a href="" className="link-2">Gift cards & Registry</a>
+                            <a href="" className="link-2">Sell</a>
+                            <a href="" className="link-2">Help</a>
+                        </div>
+                        <div className="language-container">
+                            <div className="language">
+                                <span className="lang-text">EN</span>
+                                <div><i className="fa fa-globe"></i><span className="wd"><i className="fa fa-caret-down"></i></span></div>
+                                
+                            </div>
                         </div>
                         
                     </div>
