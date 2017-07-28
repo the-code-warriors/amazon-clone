@@ -13,9 +13,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 40vw;
-  background: blue;
-  height: 10vw;
+  width: 60vw;
+  background: #EAEDED;
+  /*height: 10vw;*/
 }
 .item{
   background: red;
@@ -25,16 +25,17 @@
   flex: 0 0 auto;
 }
 .arrow{
-  font-size: 3vw;
-  top: -9%;
   z-index: 500;
-  transform: translate(0%,50%);
-}
-.arrow-left{
   position: absolute;
-  left: 0;
+  top: 26%;
+  height: 10vw;
 }
-.arrow-right{
-  position: absolute;
-  right: 0;
+
+.left-arrow{
+  left: 0vw;
+
+}
+.right-arrow{
+  right: -0.2vw;
+  transform: scaleX(-1);
 }
