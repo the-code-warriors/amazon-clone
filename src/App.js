@@ -11,8 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <Highlights></Highlights>
-        <Carousel />
         <Navbar/>
+        <Carousel />
       </div>
     );
   }
