@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import './nav-bar.css'
 
 class Navbar extends Component {
-    render(){
+    constructor(props){
+        super(props);
+        this.state = {
+            isLoggedin: false,
+            navbarMsg: 'Shop for thousands of deals',
+            cartItems: 0
+        }
+    }
+    render() {
         return (
             <div className="nav-bar-container">
                 <nav className="nav-bar">
@@ -67,12 +75,12 @@ class Navbar extends Component {
                             <input id="search-bar" type="text"/>
                             <button id="search-btn"><span className="search-icon"><i className="fa fa-search"></i></span></button>
                         </div> {/*<!-- end of search-bar container -->*/}
-                        <div className="top-nav-promo">Shop thousands of deals</div>
+                        <div className="top-nav-promo">{this.state.navbarMsg}</div>
                     </div> {/*<!-- end of nav-top -->*/}
                     
                     <div className="nav-bottom">
                         <div className="dp-container">
-                            Departments &nbsp;<span><i className="fa fa-caret-down"></i></span>
+                            <div className="dp-btn">Departments &nbsp;<span><i className="fa fa-caret-down"></i></span></div>
                         </div>
                         <div className="bottom-nav-link">
                             <a href="" className="link-1">Your Amazon.com</a>&nbsp;
@@ -88,7 +96,24 @@ class Navbar extends Component {
                                 
                             </div>
                         </div>
-                        
+                        <div className="nav-separator-container">
+                            <div className="nav-bottom-link-separator"></div>
+                        </div>
+                        <div className="account-list-container">
+                            <div className="account-top-title">{this.state.isLoggedin === false? 'Hello. Sign in': 'Welcome back!'}</div>
+                            <div className="account-bottom-title">Account & Lists &nbsp;<span><i className="fa fa-caret-down"></i></span></div>
+                        </div>
+                        <div className="orders-btn">
+                            <div className="orders-text">Orders</div>
+                        </div>
+                        <div className="try-prime-btn">
+                            <div className="try-prime-text">Try Prime &nbsp; <span><i className="fa fa-caret-down"></i></span></div>
+                        </div>
+                        <div className="cart-container">
+                            <div className="cart-img"></div>
+                                <span className="cart-text">Cart</span>
+                                <span className="cart-quantity">{this.state.cartItems}</span>
+                        </div>
                     </div>
                 </nav>
             </div>
