@@ -6,18 +6,13 @@ import './App.css';
 import Navbar from './components/navbar-component/nav-bar.component'
 
 
-
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Highlights></Highlights>
-
+        <Carousel />
         <Navbar/>
-
-
-        {/* <Carousel /> */}
-
       </div>
     );
   }

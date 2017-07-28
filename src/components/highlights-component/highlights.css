@@ -1,9 +1,17 @@
 .highlight-container{
-    display: flex;
-    width: 100vw;
+  width: 100%;
+}
+.highlight-container img{
+  width: 100%;
 }
 
-.highlight-img{
+/*.highlight-img{
     width: 100%;
-    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/airstream/upnav/C/C_latest_1x._CB503720839_.jpg); background-color: #F6F6F6; text-align: left; background-position: top left; height: 55px; background-repeat: no-repeat; background-size: 1920px; min-width: 1000px;
-}
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/airstream/upnav/C/C_latest_1x._CB503720839_.jpg);
+    background-color: #F6F6F6;
+    text-align: left;
+    background-position: top left;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}*/
