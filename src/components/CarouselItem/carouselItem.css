@@ -1,6 +1,6 @@
 .carousel-item-main{
   width: 18vw;
-  height: 18vw;
+  height: 22vw;
   padding: 0vw 1vw 0vw 1vw;
   background: white;
   margin: 1vw 0.3vw 1vw 0.3vw;
@@ -22,5 +22,5 @@
   height: 0.35vw;
 }
 .carousel-item-main p{
-  font-size: 0.5vw;
+  font-size: 1vw;
 }
