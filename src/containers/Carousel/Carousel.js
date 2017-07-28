@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
-
+import CarouselItem from './../../components/CarouselItem/CarouselItem';
 import './carousel.css';
 
 
@@ -12,20 +12,59 @@ export default class Carousel extends Component{
 
   let carouselItems = $('.carousel-items');
   let scrollDistance = 0;
-  $('.arrow-right').on('click', function(){
-    if(scrollDistance < 200){
-    scrollDistance += 50;
+  $('.right-arrow').on('click', function(){
+
+    if(scrollDistance < 600){
+    scrollDistance += 300;
     carouselItems.stop().animate({scrollLeft: scrollDistance})
+    console.log(scrollDistance);
+
+    if(scrollDistance == 600){
+      document.querySelector('.right-arrow').style.opacity = 0.5;
+      console.log('hello');
+    }else{
+      document.querySelector('.right-arrow').style.opacity = 1;
+    }
+
+    if(scrollDistance == 0){
+      document.querySelector('.left-arrow').style.opacity = 0.5;
+      console.log('hello');
+    }else{
+      document.querySelector('.left-arrow').style.opacity = 1;
+    }
   }
   });
-  $('.arrow-left').on('click', function(){
+
+  $('.left-arrow').on('click', function(){
     if(scrollDistance > 0){
-    scrollDistance -= 50;
+    scrollDistance -= 300;
     carouselItems.stop().animate({scrollLeft: scrollDistance})
+    console.log(scrollDistance);
+
+    if(scrollDistance == 600){
+      document.querySelector('.right-arrow').style.opacity = 0.5;
+      console.log('hello');
+    }else{
+      document.querySelector('.right-arrow').style.opacity = 1;
+    }
+
+    if(scrollDistance == 0){
+      document.querySelector('.left-arrow').style.opacity = 0.5;
+      console.log('hello');
+    }else{
+      document.querySelector('.left-arrow').style.opacity = 1;
+    }
   }
   })
 
 
+
+//SET COLOR BORDER FOR CAROUSEL ITEMS
+let colors = ['#82D8E3','#ADE422','#FFA724','#FF5252','#82D8E3'];
+
+//THEN LOOP THROUGH AND ASSIGN EACH IT'S RESPECTIVE COLOR
+let bordersArray = [...document.querySelectorAll('.colored-border-div')];
+bordersArray.map((val,i)=> val.style.background = colors[i])
 
 
 
@@ -107,19 +146,54 @@ export default class Carousel extends Component{
       <div className='carousel-flex'>
 
         <div className="carousel-and-arrows">
-          <h1 className="arrow arrow-left">←</h1>
+          <img className='arrow left-arrow' src="http://i.imgur.com/kceqpG0.png" alt="left-arrow"/>
 
           <div className='carousel-items'>
 
-           <div className="item"></div>
-           <div className="item"></div>
-           <div className="item"></div>
-           <div className="item"></div>
-           <div className="item"></div>
+           <CarouselItem
+             className='item'
+             color='#82D8E3'
+             title='PRIME'
+             desc1='GET FREE ONE-DAY SHIPPING'
+             desc2='Order by the afternoon'
+             img='http://i.imgur.com/qxfz07S.png'
+           />
+           <CarouselItem
+             className='item'
+             color='#ADE422'
+             desc1='LOCAL FAVORITES DELIVERED'
+             desc2='Save a trip across town'
+             title='FRESH'
+             img='http://i.imgur.com/m8In2Hn.png'
+           />
+           <CarouselItem
+             className='item'
+             color='#FFA724'
+             desc1='START WATCHING'
+             desc2='The Tick'
+             title='VIDEO'
+             img='http://i.imgur.com/0iAraVB.jpg'
+           />
+           <CarouselItem
+             className='item'
+             color='#FF5252'
+             desc1='AMAZON MUSIC UNLIMITED'
+             desc2='$10 Towards Music'
+             title='MUSIC'
+             img='http://i.imgur.com/jOGdecm.png'
+           />
+           <CarouselItem
+             className='item'
+             color='#82D8E3'
+             desc1='VOICE CONTROL YOUR WORLD'
+             desc2='Echo & Alexa Devices'
+             title='MEET ALEXA'
+             img='http://i.imgur.com/SIWXChR.png'
+           />
 
          </div>
 
-         <h1 className="arrow arrow-right">→</h1>
+         <img className='arrow right-arrow' src="http://i.imgur.com/kceqpG0.png" alt="left-arrow"/>
 
 
 
