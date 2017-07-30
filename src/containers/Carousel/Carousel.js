@@ -10,52 +10,26 @@ export default class Carousel extends Component{
 
   componentDidMount(){
 
+
+
   let carouselItems = $('.carousel-items');
   let scrollDistance = 0;
   $('.right-arrow').on('click', function(){
 
-    if(scrollDistance < 600){
+
     scrollDistance += 300;
-    carouselItems.stop().animate({scrollLeft: scrollDistance})
+    $(this).prev().stop().animate({scrollLeft: scrollDistance})
     console.log(scrollDistance);
 
-    if(scrollDistance == 600){
-      document.querySelector('.right-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.right-arrow').style.opacity = 1;
-    }
-
-    if(scrollDistance == 0){
-      document.querySelector('.left-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.left-arrow').style.opacity = 1;
-    }
-  }
   });
 
   $('.left-arrow').on('click', function(){
-    if(scrollDistance > 0){
+
     scrollDistance -= 300;
-    carouselItems.stop().animate({scrollLeft: scrollDistance})
+    $(this).next().stop().animate({scrollLeft: scrollDistance})
     console.log(scrollDistance);
-
-    if(scrollDistance == 600){
-      document.querySelector('.right-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.right-arrow').style.opacity = 1;
-    }
-
-    if(scrollDistance == 0){
-      document.querySelector('.left-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.left-arrow').style.opacity = 1;
-    }
-  }
   })
+
 
 
 
