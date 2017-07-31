@@ -10,62 +10,36 @@ export default class Carousel extends Component{
 
   componentDidMount(){
 
+
+
   let carouselItems = $('.carousel-items');
   let scrollDistance = 0;
   $('.right-arrow').on('click', function(){
 
-    if(scrollDistance < 600){
+
     scrollDistance += 300;
-    carouselItems.stop().animate({scrollLeft: scrollDistance})
+    $(this).prev().stop().animate({scrollLeft: scrollDistance})
     console.log(scrollDistance);
 
-    if(scrollDistance == 600){
-      document.querySelector('.right-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.right-arrow').style.opacity = 1;
-    }
-
-    if(scrollDistance == 0){
-      document.querySelector('.left-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.left-arrow').style.opacity = 1;
-    }
-  }
   });
 
   $('.left-arrow').on('click', function(){
-    if(scrollDistance > 0){
+
     scrollDistance -= 300;
-    carouselItems.stop().animate({scrollLeft: scrollDistance})
+    $(this).next().stop().animate({scrollLeft: scrollDistance})
     console.log(scrollDistance);
-
-    if(scrollDistance == 600){
-      document.querySelector('.right-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.right-arrow').style.opacity = 1;
-    }
-
-    if(scrollDistance == 0){
-      document.querySelector('.left-arrow').style.opacity = 0.5;
-      console.log('hello');
-    }else{
-      document.querySelector('.left-arrow').style.opacity = 1;
-    }
-  }
   })
 
 
 
-//SET COLOR BORDER FOR CAROUSEL ITEMS
-let colors = ['#82D8E3','#ADE422','#FFA724','#FF5252','#82D8E3'];
 
-//THEN LOOP THROUGH AND ASSIGN EACH IT'S RESPECTIVE COLOR
-let bordersArray = [...document.querySelectorAll('.colored-border-div')];
-bordersArray.map((val,i)=> val.style.background = colors[i])
-
+// //SET COLOR BORDER FOR CAROUSEL ITEMS
+// let colors = ['#82D8E3','#ADE422','#FFA724','#FF5252','#82D8E3'];
+//
+// //THEN LOOP THROUGH AND ASSIGN EACH IT'S RESPECTIVE COLOR
+// let bordersArray = [...document.querySelectorAll('.colored-border-div')];
+// bordersArray.map((val,i)=> val.style.background = colors[i])
+//
 
 
 
@@ -150,7 +124,21 @@ bordersArray.map((val,i)=> val.style.background = colors[i])
 
           <div className='carousel-items'>
 
-           <CarouselItem
+            {this.props.carouselItemData.map((val)=>{
+              return (
+                <CarouselItem
+                  className='item'
+                  color={val.color || ''}
+                  title={val.title || ''}
+                  desc1={val.desc1 || ''}
+                  desc2={val.desc2 || ''}
+                  img={val.img || ''}
+                  imageWidth={this.props.imageWidth}
+                 />
+              )
+            })}
+
+           {/* <CarouselItem
              className='item'
              color='#82D8E3'
              title='PRIME'
@@ -189,7 +177,7 @@ bordersArray.map((val,i)=> val.style.background = colors[i])
              desc2='Echo & Alexa Devices'
              title='MEET ALEXA'
              img='http://i.imgur.com/SIWXChR.png'
-           />
+           /> */}
 
          </div>
 
