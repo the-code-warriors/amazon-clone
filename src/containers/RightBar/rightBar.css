@@ -1,0 +1,39 @@
+.right-bar-main{
+  width: 20vw;
+  background: #F9F9F9;
+}
+.right-bar-main h1{
+  font-size: 2vw;
+}
+.right-bar-main p{
+  font-size: 1vw;
+}
+.right-bar-main a{
+  color: blue;
+  text-decoration: none;
+}
+.right-bar-main a:hover{
+  color: #d6670d;
+  text-decoration: underline;
+}
+.right-bar-main img{
+  width: 18vw;
+}
+.ad-feedback{
+  font-size: 0.4vw;
+  margin: 0vw 1vw 0.5vw 0vw;
+  display: flex;
+  justify-content: flex-end;
+}
+.dash-buttons-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tap-div{
+  display: flex;
+  justify-content: space-between;
+}
+.tap-div p span{
+  font-weight: bolder;
+}

@@ -1,0 +1,7 @@
+.right-bar-main{
+
+}
+.dash-buttons-div{
+  display: flex;
+  justify-content: space-between;
+}
