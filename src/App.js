@@ -7,6 +7,7 @@ import './App.css';
 import Navbar from './components/navbar-component/nav-bar.component';
 import FooterComponent from './components/footer-component/footer.component';
 import RightBar from './containers/RightBar/RightBar';
+import TopSlideShow from './containers/TopSlideShow/TopSlideShow';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
       <div className="App">
         <Highlights></Highlights>
         <Navbar/>
+        <TopSlideShow />
         {/* <RightBar /> */}
         <MainCarousel />
         <KindleCarousel />

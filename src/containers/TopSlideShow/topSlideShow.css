@@ -1,0 +1,30 @@
+.top-slide-show-main{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  /*justify-content: space-around;*/
+  align-items: center;
+}
+.top-slide-show-main a{
+  color: black;
+}
+.top-slide-show-main h1{
+  font-size: 4vw;
+}
+.slideshow-slide{
+  position: relative;
+  width: 100%;
+}
+.slide-arrow{
+  position: absolute;
+  top: 2vw;
+}
+.slide-arrow-left{
+  opacity: 0.2;
+  left: 0vw;
+  z-index: 500;
+}
+.slide-arrow-right{
+  right: 0vw;
+}
